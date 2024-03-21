@@ -3,7 +3,7 @@ import {
   View,
   Text,
   TextInput,
-  TouchableOpacity,
+  Pressable,
   Image,
   FlatList,
 } from "react-native";
@@ -36,13 +36,13 @@ const Welcome = () => {
           />
         </View>
 
-        <TouchableOpacity style={styles.searchBtn} onPress={() => {}}>
+        <Pressable style={styles.searchBtn} onPress={() => {}}>
           <Image
             source={icons.search}
             resizeMode="contain"
             style={styles.searchBtnImage}
           />
-        </TouchableOpacity>
+        </Pressable>
       </View>
 
       <View>
@@ -50,7 +50,7 @@ const Welcome = () => {
           <FlatList 
             data={jobTypes}
             renderItem={({ item }) => (
-              <TouchableOpacity 
+              <Pressable 
               style={styles.tab(activeJobType, item)}
               onPress={() => {
                 setActiveJobType(item);
@@ -58,7 +58,7 @@ const Welcome = () => {
               }}
             >
                 <Text style={styles.tabText(activeJobType, item)}>{item}</Text>
-              </TouchableOpacity>
+              </Pressable>
             )}
             keyExtractor={item => item}
             contentContainerStyle={{ columnGap : SIZES.small }}

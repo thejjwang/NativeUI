@@ -1,5 +1,5 @@
-import { useState} from 'react'
-import { View, Text, TouchableOpacity, FlatList, ActivityIndicator } from 'react-native'
+import { useState } from 'react'
+import { View, Text, Pressable, FlatList, ActivityIndicator } from 'react-native'
 import { useRouter } from 'expo-router';
 
 import styles from './popularjobs.style'
@@ -11,19 +11,20 @@ import useFetch from '../../../hook/useFetch';
 const Popularjobs = () => {
   const router = useRouter();
   
-  const { data, isLoading, error } = useFetch('search', {
+  const { data, isLoading, error } = useFetch
+  ('search', {
     query: 'React developer',
     num_pages: 1
-  });
+  })
   console.log(data)
 
   return (
     <View style={styles.container}>
       <View style={styles.header}>
         <Text style={styles.headerTitle}>Popular jobs</Text>
-        <TouchableOpacity>
+        <Pressable>
           <Text style={styles.headerBtn}>Show all</Text>
-        </TouchableOpacity>
+        </Pressable>
       </View>
 
       <View style={styles.cardsContainer}>
