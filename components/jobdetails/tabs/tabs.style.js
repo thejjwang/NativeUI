@@ -14,7 +14,7 @@ const styles = StyleSheet.create({
     borderRadius: SIZES.medium,
     marginLeft: 2,
     ...SHADOWS.medium,
-    shadowColor: COLORS.white,
+    boxShadow: COLORS.white,
   }),
   btnText: (name, activeTab) => ({
     fontFamily: "DMMedium",

@@ -27,25 +27,18 @@ const SIZES = {
 
 const SHADOWS = {
   small: {
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 3.84,
-    elevation: 2,
+    // Remove shadowColor, shadowOffset, shadowOpacity, and shadowRadius
+    // Add boxShadow property with the desired values
+    boxShadow: '0px 2px 3.84px rgba(0, 0, 0, 0.25)',
+    elevation: 2, // Keep elevation if necessary for Android
   },
   medium: {
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-    shadowOpacity: 0.25,
-    shadowRadius: 5.84,
-    elevation: 5,
+    // Remove shadowColor, shadowOffset, shadowOpacity, and shadowRadius
+    // Add boxShadow property with the desired values
+    boxShadow: '0px 2px 5.84px rgba(0, 0, 0, 0.25)',
+    elevation: 5, // Keep elevation if necessary for Android
   },
 };
+
 
 export { COLORS, FONT, SIZES, SHADOWS };
