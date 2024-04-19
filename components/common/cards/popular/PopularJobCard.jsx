@@ -1,4 +1,4 @@
-  import { View, Text, Pressable, Image } from 'react-native'
+import { View, Text, Pressable, Image } from 'react-native'
 
 import styles from './popularjobcard.style'
 
