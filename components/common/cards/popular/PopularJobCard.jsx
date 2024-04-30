@@ -31,4 +31,4 @@ const PopularJobCard = ({item, selectedJob, handleCardPress}) => {
   )
 }
 
-export default PopularJobCard
+export default PopularJobCard    
